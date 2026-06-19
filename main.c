@@ -28,7 +28,7 @@ int main()
     while(1)
     {
         //显示菜单
-        printf("-------------------------------------\n");
+        printf("------------------------------------\n");
         printf("1.添加学生/add student\n");
         printf("2.显示学生/show students\n");
         printf("3.保存到文件save to file\n");
@@ -88,7 +88,7 @@ void show_students()
 
 void save_to_file()
 {
-    FILE *fp=fopen(file_name,"wb");
+    FILE *fp=fopen(file_name,"wb");//二进制写模式
     if(fp==NULL)
     {
         printf("文件打开失败！\n");
