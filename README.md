@@ -1,5 +1,5 @@
-# Score-Management-System
+# C-Programe
 
-基于c语言实现的一个简易成绩管理系统TvT~
+基于c语言实现的一些简单项目
 
 0619
