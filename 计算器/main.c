@@ -1,4 +1,10 @@
 #include <stdio.h>
+// 定义颜色宏
+#define COLOR_RED     "\033[0;31m"
+#define COLOR_GREEN   "\033[0;32m"
+#define COLOR_YELLOW  "\033[0;33m"
+#define COLOR_BLUE    "\033[0;34m"
+#define COLOR_RESET   "\033[0m"
 
 typedef double calculator(double, double);
 
@@ -32,10 +38,11 @@ int main()
 
         if (choice != 1 && choice != 2 && choice != 3 && choice != 4) {
             printf("无效的选择，请重新输入。\n");
-            continue; 
+            printf(COLOR_RED "------------------------------\n" COLOR_RESET);
+            continue; // 如果输入的不是1、2、3、4、5，则重新开始循环
         }
 
-        printf("------------------------------\n");
+        printf(COLOR_GREEN "------------------------------\n" COLOR_RESET);
         printf("请输入两个数(空格分隔):");
         scanf("%lf %lf", &a, &b);
 
@@ -62,7 +69,7 @@ int main()
             printf("无效的选择，请重新输入。\n");
             break;
         }
-        printf("------------------------------\n");
+        printf(COLOR_RED "------------------------------\n" COLOR_RESET);
     }
     return 0;
 }
